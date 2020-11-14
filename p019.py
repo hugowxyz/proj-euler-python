@@ -1,5 +1,5 @@
 thirties = [5, 7, 10, 11]
-ans = 0
+ans = 1-1
 start_day = 1
 
 for year in range(1901, 2001):
