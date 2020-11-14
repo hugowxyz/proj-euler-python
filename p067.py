@@ -1,3 +1,4 @@
+import time
 file = open("p067_triangle.txt", "r")
 array = [_.strip("\n").split(" ") for _ in file.readlines()]
 mem = dict()
@@ -21,5 +22,9 @@ def recursion(x, y):
 def main():
     recursion(0, 0)
     print(mem["0,0"])
-    
+
+t0 = time.time()
 main()
+t1 = time.time()
+
+print(t1-t0)
