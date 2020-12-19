@@ -1,5 +1,3 @@
-import time
-
 def divide(a, b):
     digits = {}
     c = a
@@ -29,6 +27,7 @@ def try_guess(digits, length):
                 count += 1
 
     if count >= int(len(digits.keys())/3):
+        print(count)
         return True
             
     return False
@@ -41,28 +40,8 @@ def rl(digits):
             for j in range(i):
                 length = digits[a][i] - digits[a][j]
                 if length not in tried:
+                    #print(length, end=" ")
                     if try_guess(digits, length):
                         return length
                 tried[length] = 1
     return 0
-
-
-def main():
-    biggest, ans = 0, 0
-
-    for d in range(3, 1000, 2):
-        length = rl(divide(1, d))
-        if d % 99 == 0: print(d, end=" ")
-        if length > biggest:
-            biggest = length
-            ans = d
-
-    print(ans, biggest)
-
-start = time.time()
-main()
-end = time.time()
-print(end - start)
-
-# Roughly 14.45 seconds
-
