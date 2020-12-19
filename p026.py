@@ -65,4 +65,4 @@ end = time.time()
 print(end - start)
 
 # Roughly 14.45 seconds
-
+# 983 with cycle length 982
